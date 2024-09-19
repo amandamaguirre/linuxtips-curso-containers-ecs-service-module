@@ -18,6 +18,14 @@ variable "service_listener" {}
 
 variable "service_task_execution_role" {}
 
+variable "service_health_check" {}
+
+variable "service_launch_type" {}
+
+variable "service_task_count" {}
+
+variable "service_hosts" {}
+
 variable "environment_variables" {
   type = list(any)
 }
@@ -25,3 +33,5 @@ variable "environment_variables" {
 variable "capabilities" {
   type = list(any)
 }
+
+
