@@ -3,7 +3,7 @@ variable "region" {}
 variable "service_name" {}
 
 variable "container_image" {
-  type = string
+  type        = string
   description = "Imagem com tag"
 }
 
@@ -132,4 +132,15 @@ variable "alb_arn" {
 
 variable "scale_tracking_requests" {
   default = 0
+}
+
+variable "efs_volumes" {
+  type = list(object({
+    volume_name : string
+    file_system_id : string
+    file_system_root : string
+    mount_point : string
+    read_only : bool
+  }))
+  default = []
 }
